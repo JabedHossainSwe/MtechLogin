@@ -44,12 +44,13 @@ a:hover {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-top: 20px; /* Adjust the margin-top value as needed */
+  margin-top: 20px;
+  /* Adjust the margin-top value as needed */
 }
 
 .contents {
   width: 100%;
-
+}
 
 .contents .form-group label {
   font-size: 25px;
