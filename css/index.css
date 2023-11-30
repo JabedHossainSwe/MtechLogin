@@ -1,28 +1,22 @@
-body{
+body {
   margin: 0;
+  padding: 0;
 }
 
-.login-form-child {
+.container-child {
   position: absolute;
   top: -6px;
   left: 0;
   background-color: #43C0DB;
   width: 1000px;
-  height: 1440px;
+  height: 935px;
+  z-index: -1;
 }
-.login {
-  position: absolute;
-  top: 1107px;
-  left: 398px;
-  font-size: 50px;
-  line-height: 109%;
-  display: inline-block;
-  width: 156px;
-  height: 64px;
-}
+
 .span {
   color: #d20a0a;
 }
+
 .mtech {
   position: absolute;
   top: 30px;
@@ -33,26 +27,30 @@ body{
   width: 730px;
   height: 330px;
   color: white;
-  text-align: center;
 }
+
 .welcome-to-mtech {
   margin: 0;
   color: white;
 }
+
 .welcome-to-mtech-container {
   position: absolute;
   top: 240px;
-  left: 181px;
+  left: 180px;
   line-height: 109%;
   display: inline-block;
   width: 454px;
   height: 106px;
   color: white;
+  font-size: 20px;
 }
+
 .b-e-y,
 .register {
   display: inline-block;
 }
+
 .b-e-y {
   position: absolute;
   top: 180px;
@@ -61,65 +59,80 @@ body{
   width: 443px;
   height: 60px;
   color: white;
-  text-align: center;
+  font-size: 20px;
 }
+
 .register {
   top: 240px;
-  left: 931px;
+  left: 830px;
   text-decoration: underline;
-  color: var(--color-whitesmoke);
   width: 292px;
   height: 47px;
   color: white;
 }
-.email,
-.password,
-.register {
+
+.login-form {
+  z-index: 10;
+  margin-top: 335px;
+  margin-left: 185px;
+  color: white;
+}
+
+.login-form input[type="email"],
+.login-form label[for="email"],
+.login-form input[type="password"],
+.login-form label[for="password"] {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.register,
+.remember-me-label,
+.login-button {
   position: absolute;
   line-height: 109%;
   color: white;
 }
-.email {
-  top: 562px;
-  left: 181px;
-  display: inline-block;
-  width: 409px;
-}
-.password {
-  top: 787px;
-  left: 179px;
-}
-.login-form-inner,
-.login-form-item {
-  position: absolute;
-  top: 633px;
-  left: 179px;
-  background-color: var(--color-gainsboro-100);
-  width: 619px;
-  height: 102px;
-}
-.login-form-inner {
-  top: 862px;
-  left: 174px;
-  background-color: var(--color-whitesmoke);
-  width: 624px;
-}
-.remember-me {
-  position: absolute;
-  top: 1003px;
+
+.remember-me-label {
+  top: 500px;
   left: 206px;
   font-size: 30px;
-  line-height: 109%;
-  color: var(--color-white);
 }
-.login-form {
+
+.login-button {
+  position: absolute;
+  top: 550px;
+  left: 220px;
+  padding: 10px 20px;
+  background-color: #7CDBD8;
+  color: white;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.container {
   position: relative;
   background-color: var(--color-white);
   width: 100%;
   height: 1440px;
   overflow: hidden;
   text-align: left;
-  font-size: var(--font-size-21xl);
-  color: var(--color-gainsboro-200);
-  font-family: var(--font-poppins);
+  margin-left: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn-primary {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .login-form {
+    margin-top: 20px;
+  }
+
+  .btn-primary {
+    font-size: 16px;
+  }
 }
