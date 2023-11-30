@@ -1,9 +1,13 @@
+body{
+  margin: 0;
+}
+
 .login-form-child {
   position: absolute;
   top: -6px;
   left: 0;
   background-color: #43C0DB;
-  width: 1259px;
+  width: 1000px;
   height: 1440px;
 }
 .login {
@@ -21,27 +25,29 @@
 }
 .mtech {
   position: absolute;
-  top: 71px;
+  top: 30px;
   left: 259px;
-  font-size: 172.21px;
+  font-size: 150px;
   line-height: 109%;
   display: inline-block;
-  width: 733px;
-  height: 347px;
-  color: var(--color-gainsboro-300);
+  width: 730px;
+  height: 330px;
+  color: white;
+  text-align: center;
 }
 .welcome-to-mtech {
   margin: 0;
+  color: white;
 }
 .welcome-to-mtech-container {
   position: absolute;
-  top: 362px;
+  top: 240px;
   left: 181px;
   line-height: 109%;
   display: inline-block;
-  color: var(--color-gainsboro-300);
   width: 454px;
   height: 106px;
+  color: white;
 }
 .b-e-y,
 .register {
@@ -49,25 +55,29 @@
 }
 .b-e-y {
   position: absolute;
-  top: 261px;
+  top: 180px;
   left: 332px;
   color: var(--color-gainsboro-100);
   width: 443px;
   height: 60px;
+  color: white;
+  text-align: center;
 }
 .register {
-  top: 387px;
+  top: 240px;
   left: 931px;
   text-decoration: underline;
   color: var(--color-whitesmoke);
   width: 292px;
   height: 47px;
+  color: white;
 }
 .email,
 .password,
 .register {
   position: absolute;
   line-height: 109%;
+  color: white;
 }
 .email {
   top: 562px;
