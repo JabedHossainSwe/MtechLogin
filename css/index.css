@@ -127,6 +127,17 @@ body {
   width: 100%;
 }
 
+.image-container {
+  position: relative;
+  margin-top: -1450px;
+  margin-left: 1000px;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: 940px;
+}
+
 
 @media (max-width: 768px) {
   .login-form {
