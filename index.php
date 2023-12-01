@@ -31,49 +31,15 @@
           </div>
         </div>
 
-        <form class="login-form" action="/login" method="post">
-          <div class="row mb-3">
-            <div class="col-md-12">
-              <label for="email" class="form-label">Email</label>
-              <input type="email" id="email" name="email" autocomplete="off" class="form-control">
-            </div>
-          </div>
-          <div class="row mb-3">
-            <div class="col-md-12">
-              <label for="password" class="form-label">Password</label>
-              <input type="password" id="password" name="password" autocomplete="off" class="form-control">
-            </div>
-          </div>
-          <div class="row mb-3">
-            <div class="col-md-12">
-              <div class="form-check">
-                <input type="checkbox" id="remember-me" name="remember-me" class="form-check-input">
-                <label for="remember-me" class="form-check-label">Remember me</label>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12 text-center">
-              <button type="submit" class="btn btn-primary btn-lg">Login</button>
-            </div>
-          </div>
-        </form>
+        <?php include 'loginForm.php'; ?>
+
         <div class="register">Register</div>
       </div>
     </div>
   </div>
 
   <div class="circle-container">
-    <div class="circle">
-      <div class="circle-text"><b class="circle-mtech">
-          <span>mtech</span>
-          <span class="span">.</span>
-        </b>
-        <div class="circle-beyond">
-          B&nbsp;&nbsp;&nbsp;E&nbsp;&nbsp;&nbsp;Y&nbsp;&nbsp;&nbsp;O&nbsp;&nbsp;&nbsp;N&nbsp;&nbsp;&nbsp;D&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;&nbsp;E&nbsp;&nbsp;&nbsp;C&nbsp;&nbsp;&nbsp;H
-        </div>
-      </div>
-    </div>
+    <?php include 'circle.php'; ?>
   </div>
 
 
