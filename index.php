@@ -63,7 +63,7 @@
     </div>
   </div>
 
-  <div class="container2">
+  <div class="circle-container">
     <div class="circle">
       <div class="circle-text"><b class="circle-mtech">
           <span>mtech</span>

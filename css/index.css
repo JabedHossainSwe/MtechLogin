@@ -126,8 +126,14 @@ body {
   width: 100%;
 }
 
-.container2 {
-  background-color: black;
+.circle-container {
+  position: absolute;
+  background-color: #c8ced4bb;
+  height: 928px;
+  top: -6px;
+  left: 1000px;
+  width: 1000px;
+  z-index: -1;
 }
 
 .circle {
@@ -137,7 +143,7 @@ body {
   background-color: #7CDBD8;
   position: absolute;
   top: 50%;
-  right: 270px;
+  right: 325px;
   transform: translateY(-50%);
   display: flex;
   justify-content: center;
@@ -148,22 +154,30 @@ body {
 .circle::after {
   content: "";
   position: absolute;
-  background-color: #7CDBD8;
-  width: 60px;
-  height: 60px;
+  background-color: white;
+  width: 170px;
+  height: 90px;
   border-radius: 50%;
   top: 50%;
   transform: translateY(-50%);
 }
 
 .circle::before {
-  left: -75px;
-  /* Adjust this value to position the arrow */
+  content: "maccount";
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  left: -150px;
+  line-height: 90px;
 }
 
 .circle::after {
-  right: -75px;
-  /* Adjust this value to position the additional circle */
+  content: "msmart";
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  line-height: 90px;
+  right: -150px;
 }
 
 .circle-text {
