@@ -62,9 +62,20 @@
       </div>
     </div>
   </div>
-  <div class="image-container">
-    <img src="./images/login.png" alt="This is an image." class="img-fluid">
+
+  <div class="container2">
+    <div class="circle">
+      <div class="circle-text"><b class="circle-mtech">
+          <span>mtech</span>
+          <span class="span">.</span>
+        </b>
+        <div class="circle-beyond">
+          B&nbsp;&nbsp;&nbsp;E&nbsp;&nbsp;&nbsp;Y&nbsp;&nbsp;&nbsp;O&nbsp;&nbsp;&nbsp;N&nbsp;&nbsp;&nbsp;D&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;&nbsp;E&nbsp;&nbsp;&nbsp;C&nbsp;&nbsp;&nbsp;H
+        </div>
+      </div>
+    </div>
   </div>
+
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"

@@ -115,7 +115,7 @@ body {
 .container {
   position: relative;
   width: 100%;
-  height: 1440px;
+  height: 920px;
   overflow: hidden;
   text-align: left;
   margin-left: 0;
@@ -126,17 +126,71 @@ body {
   width: 100%;
 }
 
-.image-container {
-  position: relative;
-  margin-top: -1450px;
-  margin-left: 1000px;
-  overflow: hidden;
+.container2 {
+  background-color: black;
 }
 
-.image-container img {
-  max-width: 100%;
-  height: 940px;
+.circle {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: #7CDBD8;
+  position: absolute;
+  top: 50%;
+  right: 270px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.circle::before,
+.circle::after {
+  content: "";
+  position: absolute;
+  background-color: #7CDBD8;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.circle::before {
+  left: -75px;
+  /* Adjust this value to position the arrow */
+}
+
+.circle::after {
+  right: -75px;
+  /* Adjust this value to position the additional circle */
+}
+
+.circle-text {
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.circle-mtech {
+  font-size: 50px;
+  text-align: center;
+}
+
+.circle-beyond {
+  font-size: 10px;
+}
+
+.circle::after .circle-text {
+  position: absolute;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 
 
 @media (max-width: 768px) {
