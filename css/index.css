@@ -71,9 +71,16 @@ body {
   text-decoration: none;
 }
 
-.register a:hover {
+.register a {
+  color: white;
   text-decoration: none;
 }
+
+.register a:hover {
+  text-decoration: none;
+  color: white;
+}
+
 
 .login-form {
   z-index: 10;

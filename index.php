@@ -32,6 +32,7 @@
         </div>
 
         <div class="register"><a href="#">Register</a></div>
+
         <?php include 'loginForm.php'; ?>
 
       </div>
