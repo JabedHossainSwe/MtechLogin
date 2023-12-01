@@ -31,9 +31,9 @@
           </div>
         </div>
 
+        <div class="register"><a href="#">Register</a></div>
         <?php include 'loginForm.php'; ?>
 
-        <div class="register">Register</div>
       </div>
     </div>
   </div>

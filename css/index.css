@@ -65,10 +65,14 @@ body {
 .register {
   top: 240px;
   left: 830px;
-  text-decoration: underline;
   width: 292px;
   height: 47px;
   color: white;
+  text-decoration: none;
+}
+
+.register a:hover {
+  text-decoration: none;
 }
 
 .login-form {
@@ -150,38 +154,6 @@ body {
   align-items: center;
 }
 
-/* .circle::before,
-.circle::after {
-  content: "";
-  position: absolute;
-  background-color: #D9D9D9;
-  width: 170px;
-  height: 90px;
-  border-radius: 50px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 30px;
-}
-
-.circle::before {
-  content: "maccount";
-  color: red;
-  font-weight: bold;
-  text-align: center;
-  left: -150px;
-  line-height: 90px;
-}
-
-
-.circle::after {
-  content: "msmart";
-  color: black;
-  font-weight: bold;
-  text-align: center;
-  line-height: 90px;
-  right: -150px;
-} */
-
 .circle-text {
   color: white;
   font-weight: bold;
@@ -222,7 +194,8 @@ body {
   height: 44px;
 }
 
-.account-label .maccount {
+/* .account-label .maccount {
+  z-index: 100;
   position: fixed;
   top: 130px;
   left: -162px;
@@ -233,7 +206,29 @@ body {
   letter-spacing: 0;
   line-height: 43.6px;
   white-space: nowrap;
+} */
+
+.account-label .maccount a {
+  z-index: 100;
+  position: fixed;
+  top: 130px;
+  left: -162px;
+  font-family: "Poppins-Bold", Helvetica;
+  font-weight: 700;
+  color: transparent;
+  font-size: 30px;
+  letter-spacing: 0;
+  line-height: 43.6px;
+  white-space: nowrap;
+  text-decoration: none;
+  pointer-events: auto;
 }
+
+.account-label .maccount a:hover {
+  text-decoration: none;
+}
+
+
 
 .account-label .text-wrapper {
   color: #f01717;
@@ -280,7 +275,7 @@ body {
   width: 205px;
   height: 65px;
   top: -188px;
-  left: -220px;
+  left: -207px;
   background-color: #d9d9d9;
   border-radius: 68px;
 }
@@ -288,7 +283,7 @@ body {
 .retail-label .mretail {
   position: fixed;
   top: -180px;
-  left: -175px;
+  left: -158px;
   font-family: "Poppins-Bold", Helvetica;
   font-weight: 700;
   color: transparent;
@@ -311,7 +306,7 @@ body {
   width: 205px;
   height: 65px;
   top: -188px;
-  left: 280px;
+  left: 275px;
   background-color: #d9d9d9;
   border-radius: 68px;
 }
@@ -319,7 +314,7 @@ body {
 .resto-label .mresto {
   position: fixed;
   top: -180px;
-  left: 330px;
+  left: 323px;
   font-family: "Poppins-Bold", Helvetica;
   font-weight: 700;
   color: transparent;
@@ -374,7 +369,7 @@ body {
   width: 205px;
   height: 65px;
   top: 480px;
-  left: 95px;
+  left: 50px;
   background-color: #d9d9d9;
   border-radius: 68px;
 }
@@ -382,7 +377,7 @@ body {
 .services-label .mservices {
   position: fixed;
   top: 490px;
-  left: 120px;
+  left: 78px;
   font-family: "Poppins-Bold", Helvetica;
   font-weight: 700;
   color: transparent;
@@ -432,20 +427,65 @@ body {
 }
 
 
-
-
 .line {
   position: absolute;
   width: 2px;
-  height: 200px;
+  height: 185px;
   background-color: black;
-  top: -76px;
-  left: 50px;
+  top: -120px;
+  left: -48px;
+  border-radius: 40%;
+  transform: rotate(320deg);
+  transform-origin: 0 0;
+}
+
+
+.line2 {
+  position: absolute;
+  width: 2px;
+  height: 180px;
+  background-color: black;
+  top: -123px;
+  left: 335px;
+  border-radius: 40%;
+  transform: rotate(37deg);
+  transform-origin: 0 0;
+}
+
+.line3 {
+  position: absolute;
+  width: 2px;
+  height: 197px;
+  background-color: black;
+  top: 237px;
+  left: 27px;
+  border-radius: 40%;
+  transform: rotate(37deg);
+  transform-origin: 0 0;
+}
+
+.line4 {
+  position: absolute;
+  width: 2px;
+  height: 180px;
+  background-color: black;
+  top: 390px;
+  left: 155px;
   transform: translate(-50%, -50%);
   border-radius: 40%;
 }
 
-
+.line5 {
+  position: absolute;
+  width: 2px;
+  height: 223px;
+  background-color: black;
+  top: 225px;
+  left: 278px;
+  border-radius: 40%;
+  transform: rotate(320deg);
+  transform-origin: 0 0;
+}
 
 
 

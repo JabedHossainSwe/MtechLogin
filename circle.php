@@ -22,10 +22,20 @@
   </div>
 
   <div class="line"></div>
+  <div class="line2"></div>
+  <div class="line3"></div>
+  <div class="line4"></div>
+  <div class="line5"></div>
 
   <div class="account-label">
-    <p class="maccount"><span class="text-wrapper">m</span> <span class="span">account</span></p>
+    <p class="maccount">
+      <a href="#">
+        <span class="text-wrapper">m</span>
+        <span class="span">account</span>
+      </a>
+    </p>
   </div>
+
   <div class="smart-label">
     <p class="msmart"><span class="text-wrapper">m</span> <span class="span">smart</span></p>
   </div>
