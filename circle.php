@@ -1,4 +1,10 @@
 <div class="circle">
+  <div class="texture1"></div>
+  <div class="texture2"></div>
+  <div class="texture3"></div>
+  <div class="texture4"></div>
+  <div class="texture5"></div>
+
   <div class="account">
     <div class="account-rectangle"></div>
   </div>
@@ -35,6 +41,7 @@
       </a>
     </p>
   </div>
+
 
   <div class="smart-label">
     <p class="msmart"><span class="text-wrapper">m</span> <span class="span">smart</span></p>
