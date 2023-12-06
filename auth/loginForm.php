@@ -1,4 +1,4 @@
-<form class="login-form" action="login_process.php" method="post">
+<form class="login-form" action="../auth/login_process.php" method="post">
   <div class="row mb-3">
     <div class="col-md-12">
       <label for="email" class="form-label">Email</label>
