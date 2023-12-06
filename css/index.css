@@ -621,3 +621,19 @@ body {
   }
 
 }
+
+.register-form {
+  z-index: 10;
+  margin-top: 335px;
+  margin-left: 185px;
+  color: white;
+}
+
+.register-form input[type="email"],
+.register-form label[for="email"],
+.register-form input[type="password"],
+.register-form label[for="password"] {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
