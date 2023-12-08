@@ -6,6 +6,7 @@
   <title>Dashboard</title>
 </head>
 <body>
-  
+  <h1>Welcome</h1>
+  <button> <a href="../customer/add_customer.php">Add Customer</a> </button>
 </body>
 </html>
