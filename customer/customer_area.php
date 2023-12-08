@@ -11,31 +11,11 @@ $lang = $_SESSION['lang'];
   <meta name="viewport"
     content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,target-densitydpi=device-dpi, user-scalable=no" />
 
+  <title>Customer Area</title>
 
-  <title>Dashboard</title>
-
-  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet">
-  <link href="assets/css/animate.css" rel="stylesheet">
-  <link href="assets/css/style.css" rel="stylesheet">
-  <!-- Data Table -->
-  <link href="assets/css/plugins/dataTables/datatables.min.css" rel="stylesheet">
-  <!-- Date  -->
-  <link href="assets/css/plugins/datapicker/datepicker3.css" rel="stylesheet">
-  <link href="assets/css/plugins/iCheck/custom.css" rel="stylesheet">
-  <!-- Clock  -->
-  <link href="assets/css/plugins/clockpicker/clockpicker.css" rel="stylesheet">
-  <!-- Chosen -->
-  <link href="assets/css/plugins/chosen/bootstrap-chosen.css" rel="stylesheet">
-  <!-- Toastr style -->
-  <link href="assets/css/plugins/toastr/toastr.min.css" rel="stylesheet">
-  <!-- Select 2 -->
-  <link href="assets/css/plugins/select2/select2.min.css" rel="stylesheet">
-  <!-- Swithcer -->
-  <link href="assets/css/plugins/switchery/switchery.css" rel="stylesheet">
-  <!-- Animate Css -->
-  <link href="assets/css/animate.css" rel="stylesheet">
-  <link href="assets/css/custom.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <style>
     .direction {
       <?php if ($lang == 1) {
@@ -58,21 +38,13 @@ $lang = $_SESSION['lang'];
 <body class="pace-done mini-navbar">
 
   <div id="wrapper" class="direction">
-    <?php
-    include("top-header.php");
-
-    ?>
 
 
     <div id="page-wrapper" class="gray-bg">
-      <?php
-      include("sidebar.php");
 
-      ?>
       <div class="row wrapper border-bottom white-bg page-heading pb-2">
         <!-- <div class="col-lg-10"> -->
         <h2 class="font-weight-bold"><span class="en float-left">Customer Area</span><span class="ar float-right">
-            <?= getArabicTitle('Customer Area') ?>
           </span></h2>
         <!-- </div> -->
       </div>
@@ -80,21 +52,12 @@ $lang = $_SESSION['lang'];
 
         <div class="row">
           <div class="col-lg-12" id="loadlisting">
-
-
-
           </div>
         </div>
-
-
-
 
       </div>
 
 
-      <?php
-      include("footer.php");
-      ?>
     </div>
   </div>
   </div>
@@ -104,9 +67,8 @@ $lang = $_SESSION['lang'];
 </body>
 
 <script src="include/customer_area/js.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+  </script>
 
 </html>
-<script>
-  loadlisting();
-</script>

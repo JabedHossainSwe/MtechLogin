@@ -11,47 +11,35 @@ $lang = $_SESSION['lang'];
   <meta name="viewport"
     content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,target-densitydpi=device-dpi, user-scalable=no" />
 
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <title>Add Customer</title>
 
-  <title>Dashboard</title>
-
-  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet">
-  <link href="assets/css/animate.css" rel="stylesheet">
-  <link href="assets/css/style.css" rel="stylesheet">
-  <!-- Data Table -->
-  <link href="assets/css/plugins/dataTables/datatables.min.css" rel="stylesheet">
-  <!-- Date  -->
-  <link href="assets/css/plugins/datapicker/datepicker3.css" rel="stylesheet">
-  <link href="assets/css/plugins/iCheck/custom.css" rel="stylesheet">
-  <!-- Clock  -->
-  <link href="assets/css/plugins/clockpicker/clockpicker.css" rel="stylesheet">
-  <!-- Chosen -->
-  <link href="assets/css/plugins/chosen/bootstrap-chosen.css" rel="stylesheet">
-  <!-- Toastr style -->
-  <link href="assets/css/plugins/toastr/toastr.min.css" rel="stylesheet">
-  <!-- Select 2 -->
-  <link href="assets/css/plugins/select2/select2.min.css" rel="stylesheet">
-  <!-- Swithcer -->
-  <link href="assets/css/plugins/switchery/switchery.css" rel="stylesheet">
-  <!-- Animate Css -->
-  <link href="assets/css/animate.css" rel="stylesheet">
-  <link href="assets/css/custom.css" rel="stylesheet">
   <style>
-    .direction {
-      <?php if ($lang == 1) {
-        echo " direction: ltr;";
-      } else {
-        echo "direction: rtl;";
-      } ?>
+  * {
+    padding: 1px;
+  }
+
+  .direction {
+    <?php if ($lang==1) {
+      echo " direction: ltr;";
     }
 
-    .direction-ltr {
-      direction: ltr !important;
+    else {
+      echo "direction: rtl;";
     }
 
-    .direction-rtl {
-      direction: rtl !important;
-    }
+    ?>
+  }
+
+  .direction-ltr {
+    direction: ltr !important;
+  }
+
+  .direction-rtl {
+    direction: rtl !important;
+  }
   </style>
 </head>
 
@@ -103,7 +91,7 @@ $lang = $_SESSION['lang'];
               <div class="ibox-title">
                 <div class="row">
                   <!-- <div class="col-md-9"> -->
-                  <h5 class="mr-4"><span class="en">Add Customer</span><span class="ar"></span></h5>
+                  <!-- <h5 class="mr-4"><span class="en">Add Customer</span><span class="ar"></span></h5> -->
                   <!-- </div> -->
 
                 </div>
@@ -129,29 +117,17 @@ $lang = $_SESSION['lang'];
 
                         <div class="col-md-3">
                           <div class="form-group">
-                            <input value="<?php echo $getData; ?>" id="CCode" name="CCode" type="text"
-                              class="grpreq form-control">
+                            <input id="CCode" name="CCode" type="text" class="grpreq form-control" readonly>
                             <span class="help-block errorDiv" id="CCode_error"></span>
-
                           </div>
-                        </div>
-                        <div class="col-md-6">
-                          <button type="button" class="btn btn-success" onclick="reloadVoucher()"><i
-                              class="fa fa-refresh"></i></button>
-
-                          <button type="button" class="btn btn-success" onclick="" disabled><i
-                              class="fa fa-forward"></i></i></button>
-                          <button type="button" class="btn btn-success" onclick="" disabled><i
-                              class="fa fa-trash"></i></button>
-                          <button type="button" class="btn btn-success" onclick="" disabled><i
-                              class="fa fa-plus"></i></button>
 
                         </div>
+
                       </div>
                     </div>
 
 
-                    <div class="col-md-3">
+                    <div class="col-md-6">
                       <div class="row">
                         <div class="col-md-4">
                           <h4><span class="en">Branch</span><span class="ar"></span></h4>
@@ -168,7 +144,7 @@ $lang = $_SESSION['lang'];
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-6">
                       <div class="row">
                         <div class="col-md-4">
                           <h4><span class="en">Name </span><span class="ar"></span></h4>
@@ -561,13 +537,14 @@ $lang = $_SESSION['lang'];
                       <div class="row justify-content-center mt-5">
                         <div class="col-md-3">
                           <button type="button" class="btn btn-block btn-lg btn-outline-danger"
-                            onClick="location.reload()"><span class="en">Exit</span><span class="ar">خروج</span>
+                            onclick="window.location.href = '../view/dashboard.php';">
+                            <span class="en">Exit</span>
                           </button>
+
                         </div>
                         <div class="col-md-3">
                           <button type="submit" class="btn btn-block btn-lg btn-outline-success"
-                            id="seles_report_search" value="Search"><span class="en">Submit</span><span
-                              class="ar">يقدم</span>
+                            id="seles_report_search" value="Search"><span class="en">Submit</span>
                           </button>
                         </div>
                       </div>
@@ -592,6 +569,27 @@ $lang = $_SESSION['lang'];
   </div>
   </div>
   </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // Function to generate a random numeric code
+    function generateCode() {
+      let code = '';
+      for (let i = 0; i < 5; i++) {
+        code += Math.floor(Math.random() * 10); // Generate a random digit (0-9)
+      }
+      return code;
+    }
+
+    // Auto-generate code and populate the input field
+    document.getElementById('CCode').value = generateCode();
+  });
+  </script>
 
 
 </body>
