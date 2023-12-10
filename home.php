@@ -291,7 +291,7 @@ $lang = $_SESSION['lang'];
 <body class="pace-done mini-navbar">
 
   <div id="wrapper" class="direction">
-    <?php include("../header/top-header.php"); ?>
+    <?php include("top-header.php"); ?>
 
     <div id="page-wrapper" class="gray-bg">
       <?php include("sidebar.php"); ?>
@@ -557,7 +557,7 @@ $lang = $_SESSION['lang'];
 
 
   </div>
-  <?php include("../footer/footer.php"); ?>
+  <?php include("footer.php"); ?>
 
   </div>
   </div>

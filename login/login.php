@@ -2,6 +2,7 @@
 session_start();
 error_reporting(0);
 include("../config/main_connection.php");
+
 if ($_POST) {
 
   $email = strtolower(addslashes($_POST['email']));

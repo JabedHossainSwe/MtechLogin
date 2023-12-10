@@ -1,0 +1,59 @@
+<?php
+session_start();
+error_reporting(0);
+include("../../config/connection.php");
+$vvl = addslashes(trim($_POST['vvl']));
+$tp = addslashes(trim($_POST['tp']));
+$vatPer = addslashes(trim($_POST['vatPer']));
+$vatAmt = addslashes(trim($_POST['vatAmt']));
+$qty = $_POST['qty'];
+if($tp=='vatSprice')
+{
+$Sprice = $vvl*$qty;
+  $abx = "Exec ".dbObject."GetVatValueFromSalPrice @vatPer=$vatPer,@SPrice=$Sprice";
+$NewSp = Run($abx);
+$getV = myfetch($NewSp);
+$vatAmt = round($getV->vatAmt,2);	
+ $VatSPrice = round($getV->VatSPrice,2);
+?>
+<script>
+$( document ).ready(function() {
+$("#vatSprice").val('<?=$Sprice?>');
+$("#vatTotal").val('<?=$Sprice+$vatAmt?>');
+$("#vatPer").val('<?=$vatPer?>');
+$("#vatAmt").val('<?=$vatAmt?>');
+});
+</script>
+
+<?php
+}
+
+
+if($tp=='Sprice')
+{/*
+// $vatSPrice = $vvl;
+$Sprice = $vvl*$qty;
+$NewSp = Run("Exec ".dbObject."GetVatValueFromVatAddedPrice @vatPer=$vatPer,@vatSPrice=$Sprice");
+$getV = myfetch($NewSp);
+$vatAmt = round($getV->vatAmt,2);	
+// $SPrice = round($getV->SPrice,2);
+?>
+<script>
+$( document ).ready(function() {
+$("#vatSprice").val('<?=$Sprice?>');
+$("#vatPer").val('<?=$vatPer?>');
+$("#vatAmt").val('<?=$vatAmt?>');
+$("#vatTotal").val('<?=$Sprice + $vatAmt?>');
+});
+</script>
+
+<?php
+*/}
+
+
+?>
+
+
+
+
+
