@@ -1,35 +1,35 @@
 <?php
-include './config/connect.php';
+// include './config/connect.php';
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
-  $password = $_POST["password"];
+// if ($_SERVER["REQUEST_METHOD"] == "POST") {
+//   $email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
+//   $password = $_POST["password"];
 
-  try {
-    $sql = "SELECT id, password FROM users WHERE email = ?";
-    $stmt = $conn->prepare($sql);
-    $stmt->execute([$email]);
-    $row = $stmt->fetch(PDO::FETCH_ASSOC);
+//   try {
+//     $sql = "SELECT id, password FROM users WHERE email = ?";
+//     $stmt = $conn->prepare($sql);
+//     $stmt->execute([$email]);
+//     $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    if ($row && password_verify($password, $row['password'])) {
-      session_start();
-      $_SESSION['user_id'] = $row['id'];
+//     if ($row && password_verify($password, $row['password'])) {
+//       session_start();
+//       $_SESSION['user_id'] = $row['id'];
 
-      session_regenerate_id(true);
+//       session_regenerate_id(true);
 
-      header("Location: view/dashboard.php");
-      exit(); 
-    } else {
+//       header("Location: view/dashboard.php");
+//       exit(); 
+//     } else {
       
-      header("Location: index.php?error=InvalidCredentials");
-      exit();
-    }
-  } catch (PDOException $e) {
-    error_log("Error connecting to the database: " . $e->getMessage(), 0);
-    header("Location: /index.php?error=InternalServerError");
-    exit();
-  }
-}
+//       header("Location: index.php?error=InvalidCredentials");
+//       exit();
+//     }
+//   } catch (PDOException $e) {
+//     error_log("Error connecting to the database: " . $e->getMessage(), 0);
+//     header("Location: /index.php?error=InternalServerError");
+//     exit();
+//   }
+// }
 ?>
 
 <!DOCTYPE html>
@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 <body>
-  <form class="login-form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+  <form class="login-form" action="javascript:login_user();" method="post">
     <div class="row mb-3">
       <div class="col-md-12">
         <label for="email" class="form-label">Email</label>
