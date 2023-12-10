@@ -20,7 +20,7 @@
 //       header("Location: view/dashboard.php");
 //       exit(); 
 //     } else {
-      
+
 //       header("Location: index.php?error=InvalidCredentials");
 //       exit();
 //     }
@@ -41,11 +41,12 @@
 </head>
 
 <body>
-  <form class="login-form" action="javascript:login_user();" method="post">
+  <form class="login-form" role="form" action="login/login.php" method="post">
     <div class="row mb-3">
       <div class="col-md-12">
         <label for="email" class="form-label">Email</label>
         <input type="email" id="email" name="email" autocomplete="off" class="form-control" placeholder="Email">
+        <div id="email_error" style="color:red"></div>
       </div>
     </div>
     <div class="row mb-3">
@@ -53,6 +54,7 @@
         <label for="password" class="form-label">Password</label>
         <input type="password" id="password" name="password" autocomplete="off" class="form-control"
           placeholder="Password">
+        <div id="password_error" style="color:red"></div>
       </div>
     </div>
     <div class="row mb-3">
@@ -69,6 +71,9 @@
       </div>
     </div>
   </form>
+
+
+  <script src="vouchers/js/js.js"></script>
 </body>
 
 </html>

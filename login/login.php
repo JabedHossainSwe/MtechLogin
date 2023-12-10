@@ -142,7 +142,7 @@ from " . dbObjectMain . "Logins inner JOIN " . dbObjectMain . "Companies compani
       $_SESSION['language_array'] = $sessionLanguage;
 
 
-      printf("<script>location.href='home.php?value=welcome'</script>");
+      printf("<script>location.href='../home.php?value=welcome'</script>");
       die();
     }
 
