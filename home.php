@@ -49,12 +49,12 @@
           <nav class="main-nav">
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
-              <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+              <li class="scroll-to-section"><a href="#">Home</a></li>
               <li class="scroll-to-section"><a href="./customer/customer.php">Customer</a></li>
               <li class="scroll-to-section"><a href="./customer/add_customer.php">Add Customer</a></li>
-              <li class="scroll-to-section"><a href="customer_area.php">Customer Area</a></li>
-              <li class="scroll-to-section"><a href="salesman.php">Salesman</a></li>
-              <li class="scroll-to-section"><a href="currency.php">Currency</a></li>
+              <li class="scroll-to-section"><a href="./CustomerArea/customer_area.php">Customer Area</a></li>
+              <li class="scroll-to-section"><a href="./salesman/salesman.php">Salesman</a></li>
+              <li class="scroll-to-section"><a href="./currency/currency.php">Currency</a></li>
             </ul>
             <a class='menu-trigger'>
               <span>Menu</span>
