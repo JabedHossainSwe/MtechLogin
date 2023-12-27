@@ -69,23 +69,12 @@ curl_setopt($ch, CURLOPT_POSTFIELDS, $payload);
 curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
 // Return response instead of outputting
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-// Execute the POST request
 $result = curl_exec($ch);
-//var_dump($result);
-// Close cURL resource
 curl_close($ch);
 $response = json_decode($result);
 
-
-//print_r($result);
-
-
-//print_r($response);
-
-
 return $response;
 }
-
 
 function GetSalesGroup($branchIdsh, $transaction_type, $from_bill_no, $to_bill_no, $from_date, $to_date, $customer_id, $user_id, $UsrId,$from_product_id , $to_product_id, $product_group_id, $amount, $selected_lang,$amount_type)
 {
@@ -108,9 +97,6 @@ $data['amount_type']=$amount_type;
 $response = submit_request('reports/getSalesReportGroup',$data);	
 return $response->data;	
 }
-
-
-
 
 function GetSalesGen($branchIdsh, $transaction_type, $from_bill_no, $to_bill_no, $from_date, $to_date, $customer_id, $user_id, $UsrId,$from_product_id , $to_product_id, $product_group_id, $amount, $selected_lang,$amount_type,$GroupByType,$OrderBy)
 {
@@ -136,12 +122,6 @@ $response = submit_request('reports/GetSalesGen',$data);
 return $response->data;	
 }
 
-
-
-
-
-
-
 function GetSalesDet($branchIdsh, $transaction_type, $from_bill_no, $to_bill_no, $from_date, $to_date, $customer_id, $user_id, $UsrId,$from_product_id , $to_product_id, $product_group_id, $amount, $selected_lang,$amount_type,$OrderBy)
 {
 $data = array();
@@ -164,12 +144,6 @@ $data['OrderBy']=$OrderBy;
 $response = submit_request('reports/GetSalesDet',$data);	
 return $response->data;	
 }
-
-
-
-
-
-
 
 function getBranches()
 {
@@ -215,8 +189,6 @@ $fetch = myfetch($query);
 return $fetch;	
 }
 
-
-
 function getProductDetails($id)
 {
 $query = Run("Select Pid Id,Pcode + ' - ' + Pname CName from ".dbObject."Product where Pid = '".$id."'");
@@ -230,11 +202,6 @@ $query = Run("Select * from ".dbObject."Pur_Type where Cid = '".$id."'");
 $fetch = myfetch($query);
 return $fetch;	
 }
-
-
-
-
-
 
 function getProductGroupDetails($id)
 {
