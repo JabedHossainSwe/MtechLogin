@@ -22,7 +22,8 @@ session_start();
 <body>
 
     <div class="container mt-5">
-        <form>
+        <form action="javascript:addCustomer()" id="add_form" method="post">
+
             <div class="form-row align-items-center mb-3">
                 <div class="col-md-4">
                     <div class="row">
@@ -233,6 +234,7 @@ session_start();
     </div>
 
     <!-- Bootstrap JS -->
+    <script src='./customer.js'></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 

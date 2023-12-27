@@ -82,7 +82,11 @@
 		// Call the updateFields function when the document loads
 		document.addEventListener('DOMContentLoaded', updateFields);
 	</script>
+
+
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
 </body>
 
 </html>
