@@ -226,7 +226,7 @@ session_start();
                     </div>
 
                     <div class="col-md-3">
-                        <button type="submit" class="btn btn-block btn-lg btn-outline-success">Submit</button>
+                        <button type="submit" class="btn btn-block btn-lg btn-outline-success" value='Search' id="add_customer">Submit</button>
                     </div>
                 </div>
             </div>

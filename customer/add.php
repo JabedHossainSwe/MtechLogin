@@ -12,6 +12,7 @@ $que = 'SELECT TOP (1) CCode from CustFile order by Cid desc';
 $execute = Run($que);
 $CCode = myfetch($execute)->CCode + 1;
 $Is_Open_bal = '0';
+
 if ($OpenBalance > 0) {
   $Is_Open_bal = '1';
   $openDate = date("Y-m-d H:i:s");
@@ -33,12 +34,6 @@ $Email = addslashes(trim($_POST['Email']));
 $CRNo = addslashes(trim($_POST['CRNo']));
 $CRNo = !empty($CRNo) ? $CRNo : '0';
 
-$NANRegAdd = addslashes(trim($_POST['NANRegAdd']));
-$NANRegAdd = !empty($NANRegAdd) ? $NANRegAdd : '0';
-
-$sSize = addslashes(trim($_POST['sSize']));
-$sSize = !empty($sSize) ? $sSize : '0';
-
 $OpenBalance = addslashes(trim($_POST['OpenBalance']));
 $custAreaId = addslashes(trim($_POST['custAreaId']));
 $custDisPer = addslashes(trim($_POST['custDisPer']));
@@ -49,8 +44,6 @@ $Salesman = addslashes(trim($_POST['Salesman']));
 $VatNo = addslashes(trim($_POST['VatNo']));
 $VatNo = !empty($VatNo) ? $VatNo : '0';
 
-$BuildNo = addslashes(trim($_POST['BuildNo']));
-$BuildNo = !empty($BuildNo) ? $BuildNo : '0';
 
 $StreetName = addslashes(trim($_POST['StreetName']));
 $District = addslashes(trim($_POST['District']));
@@ -91,7 +84,6 @@ INSERT INTO [CustFile]
            ,[Contact2]
            ,[Fax]
            ,[OpenBalance]
-           ,[CustomerPaymentDiscount]
            ,[Salesman]
            ,[Email]
            ,[Is_Open_bal]
@@ -105,17 +97,14 @@ INSERT INTO [CustFile]
            ,[dateAdd]
            ,[openDebit]
             ,[VatNo]
-           ,[sSize]
            ,[IsDeleted]
             ,[CRNo]
-           ,[NANRegAdd]
-           ,[BuildNo]
            ,[StreetName]
            ,[District]
            ,[CityN]
            ,[CountryN]
            ,[PostalCode]
-           ,[AdditionalNo],[CCodeOld],[sbid]
+           ,[CCodeOld],[sbid]
            )
      VALUES
            ('" . $Cid . "'
@@ -127,7 +116,6 @@ INSERT INTO [CustFile]
            ,'" . $Contact2 . "'
            ,'" . $Fax . "'
            ,'" . $OpenBalance . "'
-           ,'" . $CustomerPaymentDiscount . "'
            ,'" . $Salesman . "'
            ,'" . $Email . "'
            ,'" . $Is_Open_bal . "'
@@ -141,24 +129,21 @@ INSERT INTO [CustFile]
            ,'" . $dateAdd . "'
            ,'" . $openDebit . "'
             ,'" . $VatNo . "'
-           ,'" . $sSize . "'
            ,'0'
             ,'" . $CRNo . "'
-           ,'" . $NANRegAdd . "'
-           ,'" . $BuildNo . "'
            ,'" . $StreetName . "'
            ,'" . $District . "'
            ,'" . $CityN . "'
            ,'" . $CountryN . "'
            ,'" . $PostalCode . "'
-           ,'" . $AdditionalNo . "','" . $defCode . "','" . $sbid . "')
+           ,'" . $defCode . "','" . $sbid . "')
  
  ";
 $run = Run($insertion);
 if ($run) {
   ?>
   <script>
-    toastr.success('Customer Added Successfully.');
+    toastr.success('Successful');
     location.reload();
 
   </script>
