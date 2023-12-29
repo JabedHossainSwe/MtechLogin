@@ -18,7 +18,7 @@ ini_set('display_errors', 1);
 </head>
 
 <body>
-  <div class="container">LKAWHEGIUVS
+  <div class="container">
     <div class="row">
       <div class="col-md-6">
         <div class="container-child">
