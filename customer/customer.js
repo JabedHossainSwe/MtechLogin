@@ -4,7 +4,7 @@ function addCustomer() {
     return false;
   }
   document.getElementById("add").innerHTML =
-    "<div style='background: #fff;text-align:center'><img width='80px' src='assets/img/loaders/loader.gif'/><div>";
+    "<div style='background: #fff;text-align:center'><img width='80px' src='assets/images/loaders/loader.gif'/><div>";
   var myform = document.getElementById("add_form");
   var fd = new FormData(myform);
   $("#add_customer").attr("disabled", true);

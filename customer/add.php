@@ -1,7 +1,7 @@
 <?php
 session_start();
 error_reporting(0);
-include("../../config/connection.php");
+include('./config/connection.php');
 
 
 $quer = 'select max(Cid) as Cid from CustFile';

@@ -1,12 +1,14 @@
 <?php
 session_start();
 error_reporting(0);
+
 include("functions.php");
 
 define('dbObject', '['.$_SESSION['dbName'].'].[dbo].');
 
 function Run($var)
 {
+
 $server = '217.76.50.216\VMI826410\SQLEXPRESS';
 
 
@@ -52,6 +54,6 @@ return $row;
 
 
 
-include_once("config/functions.php");
+include_once("./functions.php");
 
 ?>
