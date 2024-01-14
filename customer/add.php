@@ -70,8 +70,6 @@ if ($getBData->ismain == '1') {
 $defCode = $Cid . "-S" . $sbid . "-M" . $bid;
 
 
-
-
 echo $insertion = "
  
 INSERT INTO [CustFile]

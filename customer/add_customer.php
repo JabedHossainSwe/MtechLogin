@@ -7,10 +7,12 @@ session_start();
 
 <head>
     <meta charset="UTF-8">
-    <title>Customer | Form</title>
+    <title>Add | Customer</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <script src='customer.js'></script>
     <style>
         body {
             margin: 20px;
@@ -22,7 +24,7 @@ session_start();
 <body>
 
     <div class="container mt-5">
-        <form action="javascript:addCustomer()" id="add_form" method="post">
+        <form action="javascript:saveCustomer()" id="save_form" method="post">
 
             <div class="form-row align-items-center mb-3">
                 <div class="col-md-4">
@@ -226,7 +228,7 @@ session_start();
                     </div>
 
                     <div class="col-md-3">
-                        <button type="submit" class="btn btn-block btn-lg btn-outline-success" value='Search' id="add_customer">Submit</button>
+                        <button type="submit" class="btn btn-block btn-lg btn-outline-success" value='Search' id="seles_report_search">Submit</button>
                     </div>
                 </div>
             </div>
@@ -234,7 +236,7 @@ session_start();
     </div>
 
     <!-- Bootstrap JS -->
-    <script src='./customer.js'></script>
+  
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
